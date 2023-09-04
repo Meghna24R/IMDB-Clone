@@ -1,0 +1,22 @@
+.fav-container{
+    color: white;
+}
+
+#favouritesList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.removefav{
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+.morebtn{
+    position: relative;
+    left: 30px;
+}
+
+p{
+    font-size: 30px;
+}

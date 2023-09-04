@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini IMDB Clone</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="nav-container">
+            <a id="navName" href="index.html">📽IMDB Clone</a>
+            <div class="link">
+                <a id="index" class="nav-link" href="index.html">HOME</a>
+                <a id="fav" class="nav-link" href="favourites.html">FAVOURITES</a>
+            </div>
+        </div>
+    </nav>
+    <br/>
+
+    <center>
+        <div class="container">
+            <h1 class="heading">📽IMDB Clone</h1>
+            <div id="search-form">
+                <input type="text" id="searchInput" class="searchele" placeholder="Search for a movie...">
+                <ul class="list"></ul>
+                <button class="searchele  btn" id="searchbtn">Search</button>
+            </div>
+        </div>
+
+        <div id="movieListContainer"></div>
+    </center>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

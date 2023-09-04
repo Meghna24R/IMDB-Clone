@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="favourites.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="nav-container">
+            <a id="navName" href="index.html">📽IMDB Clone</a>
+            <div class="link">
+                <a id="index" class="nav-link" href="index.html">HOME</a>
+                <a id="fav" class="nav-link" href="favourites.html">FAVOURITES</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fav-container">
+        <h1 class="fav-heading">List of Your Favourite Movies</h1>
+        <div class="row" id="favouritesList">
+            <!-- The dynamically generated favourites list will be displayed here -->
+        </div>
+    </div>
+
+    <!-- javascript file-->
+    <script src="favourites.js" defer></script>
+</body>
+</html>
