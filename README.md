@@ -5,7 +5,7 @@ Imdb clone app build using html, css and javascript
 Create a mini IMDB clone app. Use ONLY vanilla javascript, no libraries or frameworks allowed for Javascript (you can use any css framework like Bootstrap).
 
 ## Features included
-* #### Homw Page ####
+* #### Home Page ####
    * Search any movie from the API and the search results are displayed on the frontend .
    * Each search result of the movie have a favourite button, clicking on which the movie is added to “My favourite movies” (a list).
    * On clicking on more button, a new page with more information about that movie (movie page).
@@ -24,6 +24,6 @@ Create a mini IMDB clone app. Use ONLY vanilla javascript, no libraries or frame
 2. [Hosted link](https://meghna24r.github.io/IMDB-Clone/)
 
 ## Note:
-  Used API for this project.
-  API used: [OMDb API](https://www.omdbapi.com/)
+  Used API for this project.   
+  API used: [OMDb API](https://www.omdbapi.com/)   
   An API key is provided through mail upon registration and an URL is sent to activate the key. The key should be appended to all of the API requests.
