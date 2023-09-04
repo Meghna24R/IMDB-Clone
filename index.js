@@ -4,7 +4,7 @@ const movieList = document.getElementById('movieListContainer');
 
 //function to search and retrieve the list of movie from the query passed as argument
 async function searchMovies (query) {
-    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${apikey}&s=${query}`);
+    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${apikey}&s=${query}`);
     const data = await response.json();
     return data.Search || [];
 }
