@@ -1,9 +1,10 @@
+const apikey = 'f12e0b8b';
 const searchInput = document.getElementById('searchInput');
 const movieList = document.getElementById('movieListContainer');
 
 //function to search and retrieve the list of movie from the query passed as argument
 async function searchMovies (query) {
-    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=f12e0b8b&s=${query}`);
+    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${apikey}&s=${query}`);
     const data = await response.json();
     return data.Search || [];
 }
