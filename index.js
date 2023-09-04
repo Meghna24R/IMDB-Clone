@@ -65,7 +65,7 @@ function addToFavourites(imdbId) {
 
 //function to retrieve and return the inforamtion about the movie based on the imdb id passed to it
 async function getMovieDetails(imdb) {
-    const response = await fetch(`https://www.omdbapi.com/?apikey=f12e0b8b&i=${imdb}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&i=${imdb}`);
     const data = await response.json();
     return data.Response === 'True' ? data : null;
 }
