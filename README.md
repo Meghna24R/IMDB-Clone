@@ -24,6 +24,6 @@ Create a mini IMDB clone app. Use ONLY vanilla javascript, no libraries or frame
 2. [Hosted link](https://meghna24r.github.io/IMDB-Clone/)
 
 ## Note:
-Used API for this project.
-API used: [OMDb API](https://www.omdbapi.com/)
-An API key is provided through mail upon registration and an URL is sent to activate the key. The key should be appended to all of the API requests.
+  Used API for this project.
+  API used: [OMDb API](https://www.omdbapi.com/)
+  An API key is provided through mail upon registration and an URL is sent to activate the key. The key should be appended to all of the API requests.
