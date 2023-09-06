@@ -35,7 +35,7 @@ function addMovieToDOM (movie) {
     } else {
         movieCard.innerHTML = `
         <div class="movie-card">
-            <img src="${movie.Poster}" class="card-img" alt="alt.jpg">
+            <img src="${movie.Poster}" class="card-img" onerror="this.src='alt.jpg';">
             //<img src="${movie.Poster}" class="card-img" alt="${movie.Title}">
             <div class="card-body">
                 <p class="card-title">${movie.Title}</p>
