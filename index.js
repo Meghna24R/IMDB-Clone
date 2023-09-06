@@ -35,7 +35,8 @@ function addMovieToDOM (movie) {
     } else {
         movieCard.innerHTML = `
         <div class="movie-card">
-            <img src="${movie.Poster}" class="card-img" alt="${movie.Title}">
+            <img src="${movie.Poster}" class="card-img" alt="alt.jpg">
+            //<img src="${movie.Poster}" class="card-img" alt="${movie.Title}">
             <div class="card-body">
                 <p class="card-title">${movie.Title}</p>
                 <button class="favbtn btn" id="${movie.imdbID}">Add to Favourites</button>
