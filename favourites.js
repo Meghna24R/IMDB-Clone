@@ -20,7 +20,7 @@ function displayFavourites() {
             const movieCard = document.createElement('div');
             movieCard.classList.add('movie-card');
             movieCard.innerHTML = `
-                <img src="${movie.Poster}" class="card-img" alt="${movie.Title}">
+                <img src="${movie.Poster}" class="card-img" onerror="this.src='alt.jpg';">
                 <div class="card-body">
                     <h5 class="card-title">${movie.Title}</h5>
                     <button class="btn removefav" data-imdbid="${movie.imdbID}">Remove from Favourites</button>

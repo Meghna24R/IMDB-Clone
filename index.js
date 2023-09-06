@@ -3,7 +3,7 @@ const movieList = document.getElementById('movieListContainer');
 
 //function to search and retrieve the list of movie from the query passed as argument
 async function searchMovies (query) {
-    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=f12e0b8b&s=${query}`);
+    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=f12e0b8b&s=${query}`);
     const data = await response.json();
     return data.Search || [];
 }
@@ -32,16 +32,29 @@ function addMovieToDOM (movie) {
             </div>
         `;
     } else {
-        movieCard.innerHTML = `
-        <div class="movie-card">
-            <img src="${movie.Poster}" class="card-img" alt="${movie.Title}">
-            <div class="card-body">
-                <p class="card-title">${movie.Title}</p>
-                <button class="favbtn btn" id="${movie.imdbID}">Add to Favourites</button>
-                <a href="movie.html?id=${movie.imdbID}" class="morebtn">More</a>
-            </div>
-        </div>
-        `;
+        if(movie.Title.length > 29){
+            movieCard.innerHTML = `
+                <div class="movie-card">
+                    <img src="${movie.Poster}" class="card-img" onerror="this.src='alt.jpg';">
+                    <div class="card-body">
+                        <p class="card-title">${movie.Title.substring(0, 25) + '...'}</p>
+                        <button class="favbtn btn" id="${movie.imdbID}">Add to Favourites</button>
+                        <a href="movie.html?id=${movie.imdbID}" class="morebtn">More</a>
+                    </div>
+                </div>
+                `;
+        }else{
+            movieCard.innerHTML = `
+                <div class="movie-card">
+                    <img src="${movie.Poster}" class="card-img" onerror="this.src='alt.jpg';">
+                    <div class="card-body">
+                        <p class="card-title">${movie.Title}</p>
+                        <button class="favbtn btn" id="${movie.imdbID}">Add to Favourites</button>
+                        <a href="movie.html?id=${movie.imdbID}" class="morebtn">More</a>
+                    </div>
+                </div>
+                `;
+        }
     }
 
     movieList.append(movieCard);
