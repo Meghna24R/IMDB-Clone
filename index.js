@@ -1,9 +1,14 @@
+const apikey = 'f12e0b8b';
 const searchInput = document.getElementById('searchInput');
 const movieList = document.getElementById('movieListContainer');
 
 //function to search and retrieve the list of movie from the query passed as argument
 async function searchMovies (query) {
+<<<<<<< HEAD
     const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=f12e0b8b&s=${query}`);
+=======
+    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${apikey}&s=${query}`);
+>>>>>>> 5009b165177f5ebbc52ef2f58dff31a897bb70a1
     const data = await response.json();
     return data.Search || [];
 }
@@ -32,6 +37,7 @@ function addMovieToDOM (movie) {
             </div>
         `;
     } else {
+<<<<<<< HEAD
         if(movie.Title.length > 29){
             movieCard.innerHTML = `
                 <div class="movie-card">
@@ -55,6 +61,18 @@ function addMovieToDOM (movie) {
                 </div>
                 `;
         }
+=======
+        movieCard.innerHTML = `
+        <div class="movie-card">
+            <img src="${movie.Poster}" class="card-img" onerror="this.src='/alt.jpg';">
+            <div class="card-body">
+                <p class="card-title">${movie.Title}</p>
+                <button class="favbtn btn" id="${movie.imdbID}">Add to Favourites</button>
+                <a href="movie.html?id=${movie.imdbID}" class="morebtn">More</a>
+            </div>
+        </div>
+        `;
+>>>>>>> 5009b165177f5ebbc52ef2f58dff31a897bb70a1
     }
 
     movieList.append(movieCard);
@@ -77,7 +95,7 @@ function addToFavourites(imdbId) {
 
 //function to retrieve and return the inforamtion about the movie based on the imdb id passed to it
 async function getMovieDetails(imdb) {
-    const response = await fetch(`https://www.omdbapi.com/?apikey=f12e0b8b&i=${imdb}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&i=${imdb}`);
     const data = await response.json();
     return data.Response === 'True' ? data : null;
 }

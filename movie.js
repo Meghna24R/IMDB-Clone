@@ -1,6 +1,6 @@
 //function to extract and return the details of the movie 
 async function getMovieDetailsById(imdbID) {
-    const response = await fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=f12e0b8b`);
+    const response = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=f12e0b8b`);
     const data = await response.json();
     return data.Response === 'True' ? data : null;
 }
@@ -12,7 +12,11 @@ function displayMovieDetails(movie) {
     movieDetailsContainer.innerHTML = `
         <h2 class="movie-title">${movie.Title}</h2>
         <div class="card">
+<<<<<<< HEAD
             <img src="${movie.Poster}" class="movie-img" onerror="this.src='alt.jpg';">
+=======
+            <img src="${movie.Poster}" class="movie-img" onerror="this.src='/alt.jpg';">
+>>>>>>> 5009b165177f5ebbc52ef2f58dff31a897bb70a1
             <div class="movieCard">
                 <p>${movie.Plot}</p>
                 <p><strong>Year:</strong> ${movie.Year}</p>

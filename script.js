@@ -4,7 +4,11 @@ let input = document.getElementById("searchInput");
 
 //function to retrieve movie based on input
 async function searchMovies (query) {
+<<<<<<< HEAD
     const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=f12e0b8b&s=${query}`);
+=======
+    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${apikey}&s=${query}`);
+>>>>>>> 5009b165177f5ebbc52ef2f58dff31a897bb70a1
     const data = await response.json();
     return data.Search || [];
 }
