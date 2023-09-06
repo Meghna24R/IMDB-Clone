@@ -12,7 +12,7 @@ function displayMovieDetails(movie) {
     movieDetailsContainer.innerHTML = `
         <h2 class="movie-title">${movie.Title}</h2>
         <div class="card">
-            <img src="${movie.Poster}" class="movie-img" alt="${movie.Title}">
+            <img src="${movie.Poster}" class="movie-img" onerror="this.src='/alt.jpg';">
             <div class="movieCard">
                 <p>${movie.Plot}</p>
                 <p><strong>Year:</strong> ${movie.Year}</p>
